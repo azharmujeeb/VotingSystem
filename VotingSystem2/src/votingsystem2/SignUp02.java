@@ -6,6 +6,10 @@
 package votingsystem2;
 
 import java.sql.*;
+import javax.swing.JOptionPane;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import javax.swing.JFrame;
 
 /**
  *
@@ -21,6 +25,9 @@ public class SignUp02 extends javax.swing.JFrame {
     
     public SignUp02() {
         initComponents();
+        JFrame f1 = new JFrame();
+        f1.pack();
+        
         con=dbconnection.con();
     }
 
@@ -100,6 +107,11 @@ public class SignUp02 extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton1.setText("Sign Up");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton2.setText("Clear");
@@ -214,6 +226,24 @@ public class SignUp02 extends javax.swing.JFrame {
     private void txt_batchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_batchActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_batchActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        try{
+            
+            dbconnection dbcon = new dbconnection();
+            
+            String Name, NsbmEmail,Degree, Password, ConfirmPassword;
+            int StudentId;
+            float Batch;
+            
+            ResultSet rs = dbcon.searchQuery("Insert into")
+            
+        }catch(Exception e){
+            System.out.println("Error"+e.getMessage());
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
