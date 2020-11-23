@@ -39,9 +39,19 @@ public class BatchRepresentative04 extends javax.swing.JFrame {
 
         btn_voter_04.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_voter_04.setText("Voter");
+        btn_voter_04.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_voter_04ActionPerformed(evt);
+            }
+        });
 
         btn_candidate_04.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_candidate_04.setText("Candidate");
+        btn_candidate_04.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_candidate_04ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -84,6 +94,16 @@ public class BatchRepresentative04 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_voter_04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_voter_04ActionPerformed
+       voting06 v1= new voting06();
+       v1.setVisible(true);
+    }//GEN-LAST:event_btn_voter_04ActionPerformed
+
+    private void btn_candidate_04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_candidate_04ActionPerformed
+       Candidate05 c1=new Candidate05();
+       c1.setVisible(true);
+    }//GEN-LAST:event_btn_candidate_04ActionPerformed
 
     /**
      * @param args the command line arguments

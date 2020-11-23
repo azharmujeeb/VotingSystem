@@ -203,13 +203,7 @@ public class voting06 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        String user = JOptionPane.showInputDialog("Enter User Name ");
-        String pass = JOptionPane.showInputDialog("Enter User ID");
-        if (user.equals("nsbm")&&pass.equals("123")) {
-            Showresult frame = new Showresult(a,b,c,d);
-            frame.setVisible(true);
-            this.dispose();
-        }
+       
                                            
 
         // TODO add your handling code here:
