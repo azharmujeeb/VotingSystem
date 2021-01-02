@@ -7,8 +7,7 @@ package system;
 
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
-import static jdk.nashorn.internal.runtime.Debug.id;
-import javax.swing.JOptionPane;
+import java.sql.*;
 
 /**
  *
@@ -237,10 +236,8 @@ public class login extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new login().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new login().setVisible(true);
         });
     }
 

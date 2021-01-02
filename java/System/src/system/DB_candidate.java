@@ -46,12 +46,8 @@ public class DB_candidate {
           Class.forName("com.mysql.jdbc.Driver");
           conn = DriverManager.getConnection(url, user, password);
         }
-        catch(SQLException e){
+        catch(SQLException | ClassNotFoundException e){
            System.out.println("Error" +e.getMessage());
-        }
-        catch(ClassNotFoundException e){
-            System.out.println("Error" +e.getMessage());
-           
         }
         finally{
             return conn;
@@ -83,11 +79,8 @@ public class DB_candidate {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new candidatepage().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new candidatepage().setVisible(true);
         });
     }
 

@@ -21,5 +21,15 @@ public class System {
     static void exit(int i) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    static class out {
+
+        static void println(String string) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public out() {
+        }
+    }
     
 }
